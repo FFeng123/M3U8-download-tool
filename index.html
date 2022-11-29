@@ -32,7 +32,7 @@
         <div class="setlist">
             <div>
                 <span>并发数</span>
-                <input type="number" id="inthread" max="512" min="1" step="1" value="32">
+                <input type="number" id="inthread" max="1024" min="1" step="1" value="32">
             </div>
             <div>
                 <span>超时时间</span>
@@ -46,8 +46,10 @@
         <h1>说明</h1>
 
         <div class="txts">
-            
-            
+            如果莫名显示“网络错误”，很可能是因为浏览器禁止了网站的跨源请求，应该设法让浏览器允许跨源请求。
+            <br><br>
+            超时时间的目的是防止有卡住的请求，这个时间不宜过短，至少让正常的请求能够正常完成。
+            <br><br>
         </div>
     </div>
     <script src="js/m3u8dl.js"></script>
