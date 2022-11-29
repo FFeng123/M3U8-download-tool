@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover">
+    <link rel="stylesheet" href="css/main.css">
+    <title>m3u8下载</title>
+</head>
+<body>
+    <div class="main">
+        <div class="selectFile button">
+            <span id="FBtnTxt">添加文件</span>
+            <input type="file" id="inputFile" multiple oninput="onSelectFile()">
+        </div>
+        <div class="inputline">
+            <input type="url" id="inputurl">
+            <div class="button" style="display: inline;" onclick="onAddURLBtn()">添加URL</div>
+        </div>
+        <div id="filelist" class="list"></div>
+        <div class="button" id="startBtn" onclick="onStartBtn()">开始下载</div>
+        <div class="button" onclick="clean()">清除无效项</div>
+        <div>
+            总进度：
+        </div>
+        <progress id="AllProg" value="1"></progress>
+        <div>
+            单文件进度：
+        </div>
+        <progress id="OneProg" value="1"></progress>
+        <h1>参数</h1>
+        <div class="setlist">
+            <div>
+                <span>并发数</span>
+                <input type="number" id="inthread" max="512" min="1" step="1" value="32">
+            </div>
+            <div>
+                <span>超时时间</span>
+                <span>
+                    <input type="number" id="intimeout" max="999999" min="0" step="1" value="30000">
+                    <span>毫秒</span>
+                </span>
+            </div>
+        </div>
+
+        <h1>说明</h1>
+
+        <div class="txts">
+            
+            
+        </div>
+    </div>
+    <script src="js/m3u8dl.js"></script>
+</body>
+</html>
